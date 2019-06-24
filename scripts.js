@@ -38,6 +38,13 @@ function Ball () {
  this.dy = Math.random() * 2;
  this.dx = Math.random((Math.random() - 0.5) * 10);
  this.vel = Math. random() /5;
+ this. update = function() {
+   c.beginPath();
+   c.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+   c.fillstyle = this.color;
+   c.fill();
+ 
+ } 
   
   
   
