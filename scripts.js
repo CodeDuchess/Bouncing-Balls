@@ -28,6 +28,20 @@ function randomColor() {
     Math.ceil(Math.random() * 10) / 10  + ")"
     );
  }
-                         
+      
+function Ball () {
+ this.color = randomColor();
+ this. radius = Math.random() * 20 + 14;
+ this. startradius = this.radius;
+ this.x = Math. random() * (tx - this.radius * 2) + this.radius;
+ this.y = Math. random() + (ty - this.radius); 
+ this.dy = Math.random() * 2;
+ this.dx = Math.random((Math.random() - 0.5) * 10);
+ this.vel = Math. random() /5;
+  
+  
+  
+
+}
                          
                          
