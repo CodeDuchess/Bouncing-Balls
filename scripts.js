@@ -33,10 +33,10 @@ function Ball() {
  this.color = randomColor();
  this.radius = Math.random() * 20 + 14;
  this.startradius = this.radius;
- this.x = Math. random() * (tx - this.radius * 2) + this.radius;
- this.y = Math. random() * (ty - this.radius); 
+ this.x = Math.random() * (tx - this.radius * 2) + this.radius;
+ this.y = Math.random() * (ty - this.radius); 
  this.dy = Math.random() * 2;
- this.dx = Math.random((Math.random() - 0.5) * 10);
+ this.dx = Math.round((Math.random() - 0.5) * 10);
  this.vel = Math.random() /5;
  this. update = function() {
    c.beginPath();
@@ -63,8 +63,8 @@ function animate () {
   c.clearRect(0, 0, tx, ty);
     for (var i = 0; i < bal.length; i ++) {
       bal[i].update();
-      bal[i].y ++ bal[i].dy;
-      bal[i].x ++ bal[i].dx;
+      bal[i].y += bal[i].dy;
+      bal[i].x += bal[i].dx;
       if (bal[i].y + bal[i].radius >= ty) {
       bal[i].dy = -bal[i].dy * grav;
     } else {
