@@ -43,12 +43,11 @@ function Ball () {
    c.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
    c.fillstyle = this.color;
    c.fill();
- 
- } 
-  
-  
-  
-
+   //c.stroke();
+  }; 
 }
+
+var bal = [];
+for (var i =0; i < 50; i ++
                          
                          
