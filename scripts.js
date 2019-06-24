@@ -17,7 +17,17 @@ addEventListener('mousemove', function() {
   mousey = event.clientY;
   });
 
-
+var grav = 0.99;
+c.strokewidth = 5;
+function randomColor() {
+  return (
+    "rgba(" +
+    Math.round(Math.random() * 250) + "," +
+    Math.round(Math.random() * 250) + "," +
+    Math.round(Math.random() * 250) + "," +
+    Math.ceil(Math.random() * 10) / 10  + ")"
+    );
+ }
                          
                          
                          
