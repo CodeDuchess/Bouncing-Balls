@@ -12,13 +12,13 @@ canvas.height = ty;
 var mousex = 0;
 var mousey = 0;
                          
-addEventListener('mousemove', function() {
+addEventListener("mousemove", function() {
   mousex = event.clientX;
   mousey = event.clientY;
   });
 
 var grav = 0.99;
-c.strokewidth = 5;
+c.strokeWidth = 5;
 function randomColor() {
   return (
     "rgba(" +
@@ -29,15 +29,15 @@ function randomColor() {
     );
  }
       
-function Ball () {
+function Ball() {
  this.color = randomColor();
- this. radius = Math.random() * 20 + 14;
- this. startradius = this.radius;
+ this.radius = Math.random() * 20 + 14;
+ this.startradius = this.radius;
  this.x = Math. random() * (tx - this.radius * 2) + this.radius;
- this.y = Math. random() + (ty - this.radius); 
+ this.y = Math. random() * (ty - this.radius); 
  this.dy = Math.random() * 2;
  this.dx = Math.random((Math.random() - 0.5) * 10);
- this.vel = Math. random() /5;
+ this.vel = Math.random() /5;
  this. update = function() {
    c.beginPath();
    c.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
