@@ -48,6 +48,21 @@ function Ball () {
 }
 
 var bal = [];
-for (var i =0; i < 50; i ++
+for (var i =0; i < 50; i ++) {
+  bal.push(new Ball());
+}
+
+function animate () {
+  if (tx != window.innerWidth || ty !=window.innerHeight) {
+    tx = window.innerWidth;
+    ty = window.innerHeight;
+    canvas.width = tx;
+    canvas.height = ty;
+  }
+  requestAnimationFrame(animate);
+  c.clearRect(0, 0, tx, ty);
+    
+  }
+}
                          
                          
