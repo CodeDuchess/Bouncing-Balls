@@ -61,7 +61,11 @@ function animate () {
   }
   requestAnimationFrame(animate);
   c.clearRect(0, 0, tx, ty);
-    
+    for (var i = 0; i < bal.length; i ++) {
+      bal[i].update();
+      bal[i].y ++ bal[i].dy;
+      bal[i].x ++ bal[i].dx;
+    }
   }
 }
                          
